@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Recoleta:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/catalogo.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">FoodMax</a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu">
+            <li>
+                <a href="index.html" class="nav-link">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    <span class="nav-text">Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="catalogo.html" class="nav-link active">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="nav-text">Catalogo</span>
+                </a>
+            </li>
+            <li>
+                <a href="chatbot.html" class="nav-link">
+                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                    <span class="nav-text">Ayuda</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="catalog-header">
+        <h1>Catalogo</h1>
+        <p>Encontra tu plato favorito</p>
+    </header>
+
+    <section class="search-section">
+        <div class="search-container">
+            <input type="text" class="search-input" id="searchInput" placeholder="Buscar productos...">
+            <select class="category-filter" id="categoryFilter">
+                <option value="all">Todas las categorias</option>
+                <option value="lomitos">Lomitos</option>
+                <option value="hamburguesas">Hamburguesas</option>
+                <option value="pollo">Pollo</option>
+                <option value="menu">Menu del Dia</option>
+                <option value="carne">Carne Asada</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="products-grid" id="productsGrid">
+            <div class="product-card" data-category="lomitos" data-name="Lomito Clasico" data-price="2500">
+                <div class="product-image"><img src="https://images.unsplash.com/photo-1615557960916-5f4791effe9d?w=400&h=300&fit=crop" alt="Lomito"></div>
+                <div class="product-info">
+                    <h3>Lomito Clasico</h3>
+                    <p>Pan casero, carne jugosa, lechuga, tomate</p>
+                    <span class="product-price">$2.500</span>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="lomitos" data-name="Lomito Completo" data-price="3200">
+                <div class="product-image"><img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop" alt="Lomito Completo"></div>
+                <div class="product-info">
+                    <h3>Lomito Completo</h3>
+                    <p>Con huevo, jamon, queso, panceta</p>
+                    <span class="product-price">$3.200</span>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="lomitos" data-name="Lomito Especial" data-price="3500">
+                <div class="product-badge">Popular</div>
+                <div class="product-image"><img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&h=300&fit=crop" alt="Lomito Especial"></div>
+                <div class="product-info">
+                    <h3>Lomito Especial</h3>
+                    <p>Jamon y Queso o Panceta y Queso</p>
+                    <span class="product-price">$3.500</span>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="hamburguesas" data-name="Hamburguesa Simple" data-price="1800">
+                <div class="product-image"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop" alt="Hamburguesa"></div>
+                <div class="product-info">
+                    <h3>Hamburguesa Simple</h3>
+                    <p>Carne artesanal, queso, lechuga, tomate</p>
+                    <span class="product-price">$1.800</span>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="hamburguesas" data-name="Hamburguesa Doble" data-price="2800">
+                <div class="product-image"><img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&h=300&fit=crop" alt="Hamburguesa Doble"></div>
+                <div class="product-info">
+                    <h3>Hamburguesa Doble</h3>
+                    <p>Doble carne, doble queso, bacon</p>
+                    <span class="product-price">$2.800</span>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="hamburguesas" data-name="Hamburguesa XL" data-price="3800">
+                <div class="product-badge">Best Seller</div>
+                <div class="product-image"><img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&h=300&fit=crop" alt="Hamburguesa XL"></div>
+                <div class="product-info">
+                    <h3>Hamburguesa XL</h3>
+                    <p>Triple carne, cheddar, pepinos</p>
+                    <span class="product-price">$3.800</span>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="pollo" data-name="Bife de Pollo" data-price="2200">
+                <div class="product-image"><img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=400&h=300&fit=crop" alt="Bife de Pollo"></div>
+                <div class="product-info">
+                    <h3>Bife de Pollo</h3>
+                    <p>Filet de pollo a la plancha</p>
+                    <span class="product-price">$2.200</span>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="pollo" data-name="Pollo Frito" data-price="2400">
+                <div class="product-image"><img src="https://images.unsplash.com/photo-1626645738196-c2a72c7aa2c1?w=400&h=300&fit=crop" alt="Pollo Frito"></div>
+                <div class="product-info">
+                    <h3>Pollo Frito</h3>
+                    <p>Crujiente por fuera, jugoso por dentro</p>
+                    <span class="product-price">$2.400</span>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="menu" data-name="Menu del Dia" data-price="2100">
+                <div class="product-badge">Del Dia</div>
+                <div class="product-image"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=300&fit=crop" alt="Menu del Dia"></div>
+                <div class="product-info">
+                    <h3>Menu del Dia</h3>
+                    <p>Plato + bebida + postre</p>
+                    <span class="product-price">$2.100</span>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="carne" data-name="Carne Asada" data-price="3500">
+                <div class="product-image"><img src="https://images.unsplash.com/photo-1546833998-877b37c2e5c6?w=400&h=300&fit=crop" alt="Carne Asada"></div>
+                <div class="product-info">
+                    <h3>Carne Asada</h3>
+                    <p>400g con guarnicion a eleccion</p>
+                    <span class="product-price">$3.500</span>
+                </div>
+            </div>
+            
+            <div class="product-card" data-category="carne" data-name="Carne Asada Completa" data-price="4200">
+                <div class="product-badge">Premium</div>
+                <div class="product-image"><img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=400&h=300&fit=crop" alt="Carne Asada Completa"></div>
+                <div class="product-info">
+                    <h3>Carne Asada Completa</h3>
+                    <p>600g + ensalada + papas + bebida</p>
+                    <span class="product-price">$4.200</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal">
+            <h2>Realizar Pedido</h2>
+            <div class="selected-product">
+                <div class="emoji" id="modalProductEmoji"></div>
+                <h3 id="modalProductName">Producto</h3>
+            </div>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="customerName">Tu Nombre:</label>
+                    <input type="text" id="customerName" required placeholder="Ingresa tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="customerMessage">Mensaje (opcional):</label>
+                    <textarea id="customerMessage" rows="2" placeholder="Alguna indicacion especial..."></textarea>
+                </div>
+                <div class="checklist-group">
+                    <h3>Agregados:</h3>
+                    <label class="checklist-item">
+                        <input type="checkbox" name="extra" value="Papas Fritas">
+                        <span>Papas Fritas (+$400)</span>
+                    </label>
+                    <label class="checklist-item">
+                        <input type="checkbox" name="extra" value="Bebida">
+                        <span>Bebida (+$300)</span>
+                    </label>
+                </div>
+                <div class="modal-buttons">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Enviar a WhatsApp</button>
+                </div>
+            </form>
+        </div>
+
+    <footer class="footer">
+        <div class="logo">FoodMax</div>
+        <p>Av. Alvear y Humberto Primo</p>
+        <p class="studio">Ag Studio 2026</p>
+    </footer>
+
+    <script src="js/catalogo.js"></script>
+</body>
+</html>
